@@ -6,11 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive card form</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="container">
-      <div class="card-body"></div>
-      <div class="form-body"></div>
+      <div class="card-section">
+        <div class="card-body">
+          <div class="card card1">
+            
+          </div>
+          <div class="card card2">
+            
+          </div>
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-body">
+        <div class="firstSet">
+          <label for="fullName">CARD HOLDER NAME</label>
+          <input type="text" name="fullName" placeholder="e.g. Jane Appleseed " class="largeForm"/>
+          <label for="fullName">CARD NUMBER</label>
+          <input type="text" name="fullName" placeholder="e.g. 1234 5678 9123 0000" class="largeForm"/>
+          </div>
+          <div class="secondSet">
+            <div class="dateDetails">
+              <label for="expiringDate"> EXP. DATE (MM/YY)</label><br>
+              <div class="dateinput">           
+            <input type="text" placeholder="MM" class="date date1">
+            <input type="text" placeholder=" YY" class="date date2">
+            </div>
+              </div>
+          <div class="ccvDetals">
+             <label for="cardCCV"> CVC</label><br>
+            <input type="text" placeholder="e.g. 123" class="ccvinput">
+          </div>
+        </div>
+        <button class="btn"> Confirm</button>
+      
+      </div>
     </section>
   </body>
 </html>
