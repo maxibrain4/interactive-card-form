@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="query.css" />
   </head>
   <body>
     <section class="container">
@@ -19,45 +20,56 @@
         <div class="card-body">
           <div class="card card1">
             <div class="inside-card">
-              <div class="logo-box">     
-               <img src="/images/card-logo.svg" alt="">
-                </div>
+              <div class="logo-box">
+                <img src="/images/card-logo.svg" class="logo-img" alt="" />
+              </div>
 
-            <p class="card-number">0000 0000 0000 0000</p>
-            <div class="cardNameCcv">
-              <div>Jane Appleseed</div>
-              <div> 00/00</div>
-            </div>
+              <div class="card-number">0000 0000 0000 0000</div>
+              <div class="cardNameDate">
+                <div class="cardName">Jane Appleseed</div>
+                <div class="cardDate">00/00</div>
+              </div>
             </div>
           </div>
           <div class="card card2">
-            <p>000</p>
+            <div class="ccv">000</div>
           </div>
         </div>
       </div>
       <div class="form-section">
-        <div class="form-body">
-        <div class="firstSet">
-          <label for="fullName">CARD HOLDER NAME</label>
-          <input type="text" name="fullName" placeholder="e.g. Jane Appleseed " class="largeForm"/>
-          <label for="fullName">CARD NUMBER</label>
-          <input type="text" name="fullName" placeholder="e.g. 1234 5678 9123 0000" class="largeForm"/>
+        <form class="form-body">
+          <div class="firstSet">
+            <label for="fullName">CARD HOLDER NAME</label>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="e.g. Jane Appleseed "
+              class="largeForm"
+              required
+            />
+            <label for="fullName">CARD NUMBER</label>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="e.g. 1234 5678 9123 0000"
+              class="largeForm"
+            />
           </div>
           <div class="secondSet">
             <div class="dateDetails">
-              <label for="expiringDate"> EXP. DATE (MM/YY)</label><br>
-              <div class="dateinput">           
-            <input type="text" placeholder="MM" class="date date1">
-            <input type="text" placeholder=" YY" class="date date2">
-            </div>
+              <label for="expiringDate"> EXP. DATE (MM/YY)</label><br />
+              <div class="dateinput">
+                <input type="text" placeholder="MM" class="date date1" />
+                <input type="text" placeholder=" YY" class="date date2" />
               </div>
-          <div class="ccvDetals">
-             <label for="cardCCV"> CVC</label><br>
-            <input type="text" placeholder="e.g. 123" class="ccvinput">
+            </div>
+            <div class="ccvDetals">
+              <label for="cardCCV"> CVC</label><br />
+              <input type="text" placeholder="e.g. 123" class="ccvinput" />
+            </div>
           </div>
-        </div>
-        <button class="btn"> Confirm</button>
-      
+          <button class="btn">Confirm</button>
+        </form>
       </div>
     </section>
   </body>

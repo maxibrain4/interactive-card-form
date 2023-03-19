@@ -4,23 +4,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  width: 100%;
+}
 .container {
   display: flex;
   width: 100%;
   max-width: 1440px;
-  height: 100%;
+  height: 789px;
 }
 .form-section {
-  width: 70%;
-  height: 789px;
+  flex: 60%;
+  height: 100%;
   background-color: hsl(0, 0%, 100%);
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card-section {
   background-image: url("/images/bg-main-desktop.png");
-  width: 30%;
-  height: 789px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 40%;
+  height: 100%;
 }
 
 .form-body {
@@ -98,7 +104,7 @@
 }
 /* CARDS */
 .card {
-  width: 320px;
+  width: 400px;
   height: 220px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -111,29 +117,55 @@
 }
 .card-body {
 }
+.inside-card {
+  margin: 20px;
+  /* border: 1px solid white; */
+}
 .card1 {
   position: absolute;
   top: 15%;
-  left: 35%;
+  left: 25%;
   background-image: url(/images/bg-card-front.png);
-  border-radius: 10px;
-  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .card2 {
   position: absolute;
   background-image: url(/images/bg-card-back.png);
-  border-radius: 10px;
+  left: 40%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 .logo-box {
   margin-bottom: 40px;
 }
 .card-number {
-  font-size: 18px;
+  font-size: 28px;
+  font-family: "Space Grotesk", sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  /* border: 1px solid white; */
+  margin-bottom: 30px;
+}
+.cardNameDate {
+  /* border: 1px solid white; */
+  padding: 0 2px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
   font-family: "Space Grotesk", sans-serif;
   color: #fff;
   letter-spacing: 2px;
 }
-.cardNameCcv {
-  display: flex;
-  justify-content: space-between;
+.cardName {
+  text-transform: uppercase;
+}
+.ccv {
+  margin-right: 50px;
+  letter-spacing: 2px;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
 }

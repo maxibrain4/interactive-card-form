@@ -1,0 +1,68 @@
+/* QUERY */
+@media (max-width: 1115px) {
+  .container {
+    flex-direction: column;
+    position: relative;
+  }
+  .form-section {
+    flex: 60%;
+    padding-top: 120px;
+    position: static;
+  }
+  .card-section {
+    flex: 40%;
+    background-size: cover;
+    justify-content: center;
+  }
+  .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    /* width: 400px;
+    height: 220px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .card1 {
+    top: 55%;
+    z-index: 999;
+    left: 2%;
+  }
+  .card2 {
+    left: 10%;
+  }
+}
+@media (max-width: 463px) {
+  .card {
+    width: 80%;
+    height: 220px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .card1 {
+  }
+  .card2 {
+  }
+  .inside-card {
+    margin: 10px;
+    /* border: 1px solid white; */
+  }
+  .logo-box {
+    margin: 20px;
+  }
+  .card-number {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .cardNameDate {
+    font-size: 13px;
+  }
+  .ccv {
+    margin-top: -50px;
+  }
+  .logo-img {
+    width: 58px;
+  }
+}
