@@ -52,8 +52,10 @@
               type="text"
               name="fullName"
               placeholder="e.g. 1234 5678 9123 0000"
-              class="largeForm"
+              class="largeForm largeForm2"
+              maxlength="16"
             />
+            <p class="errorMessage1"></p>
           </div>
           <div class="secondSet">
             <div class="dateDetails">
@@ -61,16 +63,23 @@
               <div class="dateinput">
                 <input type="text" placeholder="MM" class="date date1" />
                 <input type="text" placeholder=" YY" class="date date2" />
+                <br />
               </div>
             </div>
             <div class="ccvDetals">
               <label for="cardCCV"> CVC</label><br />
-              <input type="text" placeholder="e.g. 123" class="ccvinput" />
+              <input
+                type="text"
+                placeholder="e.g. 123"
+                class="ccvinput"
+              /><br />
+              <p class="errorMessage2"></p>
             </div>
           </div>
           <button class="btn">Confirm</button>
         </form>
       </div>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>
