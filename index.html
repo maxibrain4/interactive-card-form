@@ -53,7 +53,7 @@
               name="fullName"
               placeholder="e.g. 1234 5678 9123 0000"
               class="largeForm largeForm2"
-              maxlength="16"
+              maxlength="19"
             />
             <p class="errorMessage1"></p>
           </div>
@@ -61,8 +61,18 @@
             <div class="dateDetails">
               <label for="expiringDate"> EXP. DATE (MM/YY)</label><br />
               <div class="dateinput">
-                <input type="text" placeholder="MM" class="date date1" />
-                <input type="text" placeholder=" YY" class="date date2" />
+                <input
+                  type="text"
+                  placeholder="MM"
+                  class="date date1"
+                  maxlength="2"
+                />
+                <input
+                  type="text"
+                  placeholder=" YY"
+                  class="date date2"
+                  maxlength="2"
+                />
                 <br />
               </div>
             </div>

@@ -19,14 +19,24 @@ const numInput = document.querySelector(".largeForm2");
 const cardNumber = document.querySelector(".card-number");
 const ccvNumber = document.querySelector(".ccv");
 const ccvInput = document.querySelector(".ccvinput");
+
+//
 nameInput.addEventListener("input", function () {
   cardName.textContent = nameInput.value;
 });
 
-numInput.addEventListener("input", function () {
-  cardNumber.textContent = numInput.value;
-});
+ccvInput.addEventListener(
+  "input",
+  () => (ccvNumber.textContent = ccvInput.value)
+);
 
-ccvInput.addEventListener("input", function () {
-  ccvNumber.textContent = ccvInput.value;
+numInput.addEventListener("input", function () {
+  const formatNumber = (number) =>
+    number.split("").reduce((seed, next, index) => {
+      if (index !== 0 && !(index % 4)) seed += " ";
+      return seed + next;
+    }, "");
+  cardNumber.textContent = numInput.value = formatNumber(
+    numInput.value.replaceAll(" ", "")
+  );
 });
