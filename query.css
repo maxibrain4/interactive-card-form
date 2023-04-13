@@ -65,4 +65,13 @@
   .logo-img {
     width: 58px;
   }
+  .btn-thank-you {
+    width: 80%;
+  }
+  .thankBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
