@@ -19,6 +19,10 @@ const numInput = document.querySelector(".largeForm2");
 const cardNumber = document.querySelector(".card-number");
 const ccvNumber = document.querySelector(".ccv");
 const ccvInput = document.querySelector(".ccvinput");
+const montht = document.querySelector(".month");
+const yearr = document.querySelector(".year");
+const monthInput = document.querySelector(".date1");
+const yearInput = document.querySelector(".date2");
 
 //
 nameInput.addEventListener("input", function () {
@@ -39,4 +43,11 @@ numInput.addEventListener("input", function () {
   cardNumber.textContent = numInput.value = formatNumber(
     numInput.value.replaceAll(" ", "")
   );
+});
+
+monthInput.addEventListener("input", function () {
+  montht.textContent = monthInput.value;
+});
+yearInput.addEventListener("input", function () {
+  yearr.textContent = yearInput.value;
 });
