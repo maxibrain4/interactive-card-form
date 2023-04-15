@@ -69,9 +69,20 @@ body {
   margin: 8px 0;
   border-radius: 7px;
 }
-.dateinput:focus {
-  border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+.input-control input:focus {
+  outline: none;
 }
+.input-control.success input {
+  border: 1px solid hsl(278, 68%, 11%);
+}
+.input-control.error input {
+  border: 1px solid hsl(0, 100%, 66%);
+}
+.input-control.error {
+  color: hsl(0, 100%, 66%);
+  font-size: 14px;
+}
+
 .date2 {
   margin-left: 8px;
 }
@@ -89,9 +100,19 @@ body {
   border-radius: 7px;
   border: 1px solid hsl(270, 3%, 87%);
 }
-.ccvinput:focus {
-  border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+.errorMessage1 {
+  margin-top: -20px;
+  margin-bottom: 10px;
 }
+.errorMessage2 {
+  margin-top: -20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* .errorMessage3 {
+  margin-top: 0px;
+} */
 
 /*BTN*/
 .btn {

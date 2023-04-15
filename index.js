@@ -1,29 +1,16 @@
 "use strict";
-// const btnSubmit = document.querySelector(".btn");
-// const errorMessageOne = document.querySelector(".errorMessage1");
-// const errorMessageTwo = document.querySelector(".errorMessage2");
-// let x = document.querySelector(".largeForm2").value;
-
-// btnSubmit.addEventListener("click", function () {
-//   errorMessageOne.innerHTML = "";
-//   try {
-//     if (x.trim() == "") throw "input can not be empty";
-//     if (isNaN(x)) throw "Wrong format, numbers only";
-//   } catch (err) {
-//     errorMessageOne.innerHTML = err;
-//   }
-// });
-const nameInput = document.querySelector(".largeForm");
+const btnSubmit = document.querySelector(".btn");
+const nameInput = document.querySelector(".largeForm1");
 const cardName = document.querySelector(".cardName");
 const numInput = document.querySelector(".largeForm2");
 const cardNumber = document.querySelector(".card-number");
 const ccvNumber = document.querySelector(".ccv");
 const ccvInput = document.querySelector(".ccvinput");
-const montht = document.querySelector(".month");
-const yearr = document.querySelector(".year");
 const monthInput = document.querySelector(".date1");
 const yearInput = document.querySelector(".date2");
-
+const formInput = document.querySelector(".formInput");
+const form = document.querySelector(".form");
+// const errorDisplay = document.querySelector(".error");
 //
 nameInput.addEventListener("input", function () {
   cardName.textContent = nameInput.value;
@@ -45,9 +32,53 @@ numInput.addEventListener("input", function () {
   );
 });
 
-monthInput.addEventListener("input", function () {
-  montht.textContent = monthInput.value;
+// let x = document.querySelector(".largeForm2").value;
+
+form.addEventListener("click", function (e) {
+  e.preventDefault();
+  validInput();
 });
-yearInput.addEventListener("input", function () {
-  yearr.textContent = yearInput.value;
-});
+const setError = function (element, message) {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+  errorDisplay.innerText = message;
+  inputControl.classList.add("error");
+  inputControl.classList.remove("success");
+};
+const setSuccess = function (element) {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+  errorDisplay.innerText = "";
+  inputControl.classList.add("success");
+  inputControl.classList.remove("error");
+};
+
+const validInput = function () {
+  const nameInputValue = nameInput.value;
+  const numInputValue = numInput.value;
+  const monthInputValue = monthInput.value;
+  const ccvInputValue = ccvInput.value;
+  const yearInputValue = yearInput.value;
+
+  if (nameInputValue === "") {
+    setError(nameInput, "Please enter your name");
+  } else {
+    setSuccess(nameInput);
+  }
+
+  if (numInputValue === "") {
+    setError(numInput, "Please enter a number");
+  } else {
+    setSuccess(numInput);
+  }
+  if (ccvInputValue === "") {
+    setError(ccvInput, "Can't be blank");
+  } else {
+    setSuccess(ccvInput);
+  }
+  if (monthInputValue === "") {
+    setError(monthInput, "Can't be blank");
+  } else {
+    setSuccess(monthInput);
+  }
+};

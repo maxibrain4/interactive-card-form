@@ -39,30 +39,34 @@
         </div>
       </div>
       <div class="form-section">
-        <form class="form-body">
+        <form class="form-body form">
           <div class="firstSet">
-            <label for="fullName">CARD HOLDER NAME</label>
-            <input
-              type="text"
-              name="fullName"
-              placeholder="e.g. Jane Appleseed "
-              class="largeForm"
-              required
-            />
-            <label for="fullName">CARD NUMBER</label>
-            <input
-              type="text"
-              name="fullName"
-              placeholder="e.g. 1234 5678 9123 0000"
-              class="largeForm largeForm2"
-              maxlength="19"
-            />
-            <p class="errorMessage1"></p>
+            <div class="input-control">
+              <label for="fullName">CARD HOLDER NAME</label>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="e.g. Jane Appleseed "
+                class="largeForm largeForm1"
+              />
+              <div class="errorMessage1 error"></div>
+            </div>
+            <div class="input-control">
+              <label for="fullName">CARD NUMBER</label>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="e.g. 1234 5678 9123 0000"
+                class="largeForm largeForm2"
+                maxlength="19"
+              />
+              <div class="errorMessage2 error"></div>
+            </div>
           </div>
-          <div class="secondSet">
+          <div class="secondSet input-control">
             <div class="dateDetails">
-              <label for="expiringDate"> EXP. DATE (MM/YY)</label><br />
               <div class="dateinput">
+                <label for="expiringDate"> EXP. DATE (MM/YY)</label><br />
                 <input
                   type="text"
                   placeholder="MM"
@@ -75,10 +79,10 @@
                   class="date date2"
                   maxlength="2"
                 />
-                <br />
               </div>
+              <div class="error"></div>
             </div>
-            <div class="ccvDetals">
+            <div class="ccvDetals input-control">
               <label for="cardCCV"> CVC</label><br />
               <input
                 type="text"
@@ -86,10 +90,10 @@
                 class="ccvinput"
                 maxlength="3"
               /><br />
-              <p class="errorMessage2"></p>
+              <div class="error"></div>
             </div>
           </div>
-          <button class="btn">Confirm</button>
+          <button type="submit" class="btn">Confirm</button>
         </form>
         <div class="thankBox">
           <div class="imagebox">
