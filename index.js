@@ -8,8 +8,14 @@ const ccvNumber = document.querySelector(".ccv");
 const ccvInput = document.querySelector(".ccvinput");
 const monthInput = document.querySelector(".date1");
 const yearInput = document.querySelector(".date2");
-const formInput = document.querySelector(".formInput");
+const monthh = document.querySelector(".month");
+const yearr = document.querySelector(".year");
+const formBox = document.querySelector(".form");
+const thankYou = document.querySelector(".thankBox");
 const form = document.querySelector(".form");
+const contButton = document.querySelector(".btn-thank-you");
+const body = document.getElementsByTagName("body");
+
 // const errorDisplay = document.querySelector(".error");
 //
 nameInput.addEventListener("input", function () {
@@ -20,6 +26,12 @@ ccvInput.addEventListener(
   "input",
   () => (ccvNumber.textContent = ccvInput.value)
 );
+monthInput.addEventListener("input", function () {
+  monthh.textContent = monthInput.value;
+});
+yearInput.addEventListener("input", function () {
+  yearr.textContent = yearInput.value;
+});
 
 numInput.addEventListener("input", function () {
   const formatNumber = (number) =>
@@ -32,12 +44,6 @@ numInput.addEventListener("input", function () {
   );
 });
 
-// let x = document.querySelector(".largeForm2").value;
-
-form.addEventListener("click", function (e) {
-  e.preventDefault();
-  validInput();
-});
 const setError = function (element, message) {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error");
@@ -53,7 +59,9 @@ const setSuccess = function (element) {
   inputControl.classList.remove("error");
 };
 
-const validInput = function () {
+form.addEventListener("click", function (e) {
+  e.preventDefault();
+  // validInput();
   const nameInputValue = nameInput.value;
   const numInputValue = numInput.value;
   const monthInputValue = monthInput.value;
@@ -71,6 +79,7 @@ const validInput = function () {
   } else {
     setSuccess(numInput);
   }
+
   if (ccvInputValue === "") {
     setError(ccvInput, "Can't be blank");
   } else {
@@ -81,4 +90,25 @@ const validInput = function () {
   } else {
     setSuccess(monthInput);
   }
-};
+  if (yearInputValue === "") {
+    setError(yearInput, "Can't be blank");
+  } else {
+    setSuccess(yearInput);
+  }
+  if (
+    nameInputValue !== "" &&
+    numInputValue !== "" &&
+    ccvInputValue !== "" &&
+    monthInputValue !== "" &&
+    yearInputValue !== ""
+  ) {
+    formBox.classList.add("hide");
+    thankYou.classList.remove("hide");
+  }
+});
+
+contButton.addEventListener("click", function () {
+  formBox.classList.remove("hide");
+  thankYou.classList.add("hide");
+  form.reset();
+});

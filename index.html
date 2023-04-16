@@ -63,10 +63,12 @@
               <div class="errorMessage2 error"></div>
             </div>
           </div>
-          <div class="secondSet input-control">
+          <div class="secondSet">
             <div class="dateDetails">
-              <div class="dateinput">
-                <label for="expiringDate"> EXP. DATE (MM/YY)</label><br />
+              <div class="dateinput input-control">
+                <label id="datelabel" for="expiringDate">
+                  EXP. DATE (MM/YY)</label
+                >
                 <input
                   type="text"
                   placeholder="MM"
@@ -79,8 +81,8 @@
                   class="date date2"
                   maxlength="2"
                 />
+                <div id="commanderror" class="error"></div>
               </div>
-              <div class="error"></div>
             </div>
             <div class="ccvDetals input-control">
               <label for="cardCCV"> CVC</label><br />
@@ -95,7 +97,7 @@
           </div>
           <button type="submit" class="btn">Confirm</button>
         </form>
-        <div class="thankBox">
+        <div class="thankBox hide">
           <div class="imagebox">
             <svg
               width="80"

@@ -45,30 +45,34 @@ body {
   border: 1px solid hsl(270, 3%, 87%);
   margin-bottom: 25px;
 }
-.largeForm:focus {
-  border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
-}
+
 /* .dateDetails {
   display: flex;
 } */
 .date {
-  width: 50%;
+  width: 80%;
   padding: 14px 12px;
   border-radius: 7px;
   border: 1px solid hsl(270, 3%, 87%);
 }
+
 .secondSet {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin-bottom: 30px;
 }
 
 .dateinput {
-  display: flex;
+  display: grid;
+  grid-template-column: 1fr 1fr 1fr 1fr;
+  grid-template-row: 1fr 1fr 1fr;
+  row-gap: 5px;
   margin: 8px 0;
   border-radius: 7px;
 }
+
 .input-control input:focus {
   outline: none;
 }
@@ -82,13 +86,24 @@ body {
   color: hsl(0, 100%, 66%);
   font-size: 14px;
 }
-
+.date1 {
+  grid-row: 2/3;
+}
 .date2 {
-  margin-left: 8px;
+  grid-row: 2/3;
+}
+#commanderror {
+  margin-top: 2px;
+  grid-column: 4/-1;
+}
+#datelabel {
+  grid-column: 1 / 3;
+  margin-bottom: 10px;
 }
 .dateDetails {
   width: 40%;
 }
+
 .ccvDetals {
   width: 60%;
   padding-left: 8px;
@@ -196,6 +211,8 @@ body {
   /* border: 1px solid red; */
   width: 400px;
   font-family: "Space Grotesk", sans-serif;
+}
+.hide {
   display: none;
 }
 .imagebox {
