@@ -14,7 +14,7 @@ const formBox = document.querySelector(".form");
 const thankYou = document.querySelector(".thankBox");
 const form = document.querySelector(".form");
 const contButton = document.querySelector(".btn-thank-you");
-const body = document.getElementsByTagName("body");
+const body = document.querySelector("body");
 
 // const errorDisplay = document.querySelector(".error");
 //
@@ -110,5 +110,5 @@ form.addEventListener("click", function (e) {
 contButton.addEventListener("click", function () {
   formBox.classList.remove("hide");
   thankYou.classList.add("hide");
-  form.reset();
+  location.reload();
 });
